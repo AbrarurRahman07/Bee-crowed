@@ -1,24 +1,44 @@
-#include <iostream>
-#include <vector>
+#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
-
-int main() {
-    int n;
-    cin >> n;
-
-    vector<int> p(n + 1);      // উপহার দেওয়া তথ্য (1-based indexing)
-    vector<int> res(n + 1);    // উপহার পাওয়ার তথ্য (উল্টো)
-
-    for (int i = 1; i <= n; ++i) {
-        cin >> p[i];
-        res[p[i]] = i;         // p[i] নম্বর বন্ধু উপহার পেয়েছে i থেকে
+int main()
+{
+    int n;///1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+    cin>>n;
+    vector<int>a,b,c;
+    int x=1,y=2,z=3;
+    while(x<=n)
+    {
+        a.push_back(x);
+        x+=3;
     }
-
-    for (int i = 1; i <= n; ++i) {
-        cout << res[i] << " ";
+    while(y<=n)
+    {
+        b.push_back(y);
+        y+=3;
     }
-    cout << endl;
-
-    return 0;
+    while(z<=n)
+    {
+        c.push_back(z);
+        z+=3;
+    }
+    for(auto p:a)
+    {
+        if(p==n)
+            cout<<"I hate it"<<endl;
+        return 0;
+    }
+    for(auto q:b)
+    {
+        if(q==n)
+            cout<<"I hate that I love it"<<endl;
+        return 0;
+    }
+    for(auto r:c)
+    {
+        if(r==n)
+            cout<<"I hate that I love that I hate it"<<endl;
+        return 0;
+    }
 }
 
